@@ -13,8 +13,7 @@ assignees: ''
 * Respect the project's Code Of Conduct.
 
 #### Description
-If the issue is a feature request, explain why it should be added (use specific
-use-cases).
+Explain why the feature should be added (name specific use-cases).
 
 #### Screenshots
 As required.
