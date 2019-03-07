@@ -1,4 +1,3 @@
-#### Prerequisites
 ---
 name: Feature Request
 about: Suggest an idea for this project
@@ -8,6 +7,7 @@ assignees: ''
 
 ---
 
+#### Prerequisites
 * Ensure the issue isn't already reported.
 * Follow the project's Contributing guidelines.
 * Respect the project's Code Of Conduct.
