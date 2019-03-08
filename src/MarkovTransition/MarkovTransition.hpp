@@ -36,12 +36,15 @@ public:
   MarkovTransition& operator= (MarkovTransition&& rh) = default;
 
   // specialized methods
-  std::size_t get_all_weights () const;
+  void add_transition (char next_state);
+  std::size_t get_weight (char next_state) const;
+  std::size_t get_total_weights () const;
+  char get_weighted_random_next_state () const;
 
 private:
 
   // fields
-  std::unordered_multiset<wchar_t> transitions;
+  std::unordered_multiset<char> transitions;
 
 };
 
