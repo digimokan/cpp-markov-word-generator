@@ -58,7 +58,7 @@ Train the model with data sets of names.
 4. Run the program:
 
    ```shell
-   $ ./cpp-markov-name-generator
+   $ ./markov-name-gen
    ```
 
 ## Full Usage / Options
@@ -72,13 +72,13 @@ Train the model with data sets of names.
 * Run with some option:
 
    ```shell
-   $ ./cpp-markov-name-generator -d
+   $ ./markov-name-gen -d
    ```
 
 * Run with some other option:
 
    ```shell
-   $ ./cpp-markov-name-generator -rt
+   $ ./markov-name-gen -rt
    ```
 
 ## Design
