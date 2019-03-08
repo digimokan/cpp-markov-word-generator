@@ -1,10 +1,10 @@
-# cpp-markov-name-generator
+# cpp-markov-word-generator
 
-Linux/UNIX command-line Markov Model name generator, written in C++.
+Linux/UNIX command-line Markov Model word generator, written in C++.
 
-[![Release](https://img.shields.io/github/release/digimokan/cpp-markov-name-generator.svg?label=release)](https://github.com/digimokan/cpp-markov-name-generator/releases/latest "Latest Release Notes")
+[![Release](https://img.shields.io/github/release/digimokan/cpp-markov-word-generator.svg?label=release)](https://github.com/digimokan/cpp-markov-word-generator/releases/latest "Latest Release Notes")
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?label=license)](LICENSE.txt "Project License")
-[![Build Status](https://img.shields.io/travis/com/digimokan/cpp-markov-name-generator/master.svg?label=linux+build)](https://travis-ci.com/digimokan/cpp-markov-name-generator "Build And Test Results From Master Branch")
+[![Build Status](https://img.shields.io/travis/com/digimokan/cpp-markov-word-generator/master.svg?label=linux+build)](https://travis-ci.com/digimokan/cpp-markov-word-generator "Build And Test Results From Master Branch")
 
 ## Table Of Contents
 
@@ -20,8 +20,8 @@ Linux/UNIX command-line Markov Model name generator, written in C++.
 
 ## Motivation
 
-Use machine learning / deep learning to generate names using a Markov Model.
-Train the model with data sets of names.
+Use machine learning / deep learning to generate words using a Markov Model.
+Train the model with data sets of words.
 
 ## Features
 
@@ -40,13 +40,13 @@ Train the model with data sets of names.
 1. Clone project into a local project directory:
 
    ```shell
-   $ git clone https://github.com/digimokan/cpp-markov-name-generator.git
+   $ git clone https://github.com/digimokan/cpp-markov-word-generator.git
    ```
 
 2. Change to the local project directory:
 
    ```shell
-   $ cd cpp-markov-name-generator
+   $ cd cpp-markov-word-generator
    ```
 
 3. Build the program:
@@ -58,7 +58,7 @@ Train the model with data sets of names.
 4. Run the program:
 
    ```shell
-   $ ./markov-name-gen
+   $ ./markov-word-gen
    ```
 
 ## Full Usage / Options
@@ -72,13 +72,13 @@ Train the model with data sets of names.
 * Run with some option:
 
    ```shell
-   $ ./markov-name-gen -d
+   $ ./markov-word-gen -d
    ```
 
 * Run with some other option:
 
    ```shell
-   $ ./markov-name-gen -rt
+   $ ./markov-word-gen -rt
    ```
 
 ## Design
@@ -90,7 +90,7 @@ A paragraph or two about architecture.
 ## Source Code Layout
 
 ```
-├─┬ cpp-markov-name-generator/
+├─┬ cpp-markov-word-generator/
 │ │
 │ ├─┬ src/
 │ │ ├─┬ somea/
@@ -119,7 +119,7 @@ A paragraph or two about architecture.
 ## Contributing
 
 * Feel free to report a bug or propose a feature by opening a new
-  [Issue](https://github.com/digimokan/cpp-markov-name-generator/issues).
+  [Issue](https://github.com/digimokan/cpp-markov-word-generator/issues).
 * Follow the project's [Contributing](CONTRIBUTING.md) guidelines.
 * Respect the project's [Code Of Conduct](CODE_OF_CONDUCT.md).
 

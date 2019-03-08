@@ -1,5 +1,5 @@
 # cmake project title
-cpp-markov-name-generator
+cpp-markov-word-generator
 # cmake min version required
 3.0.2
 # language type:"C" or "CPP"
@@ -15,7 +15,7 @@ src
 # src file with main-executable code: "-" if none, i.e. test only
 src/main.cpp
 # main executable file to build: "-" if none, i.e. test only
-markov-name-gen
+markov-word-gen
 # testing language type: "C" or "CPP" (N/A if building without -t/-T)
 CPP
 # testing language standard (N/A if building without -t/-T)
