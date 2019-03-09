@@ -35,9 +35,19 @@ bool WordMarker::is_marker (char ch) const {
   return (ch == this->marker);
 }
 
-std::string WordMarker::apply_markers (std::string word) const {
-  word.insert(word.begin(), this->order, this->marker);
-  word.append(1u, this->marker);
-  return word;
+std::string WordMarker::get_prefix () const {
+  return this->make_prefix();
+}
+
+std::string WordMarker::apply_markers (const std::string& word) const {
+  return (this->make_prefix() + word + this->marker);
+}
+
+/*******************************************************************************
+* HELPER METHODS
+*******************************************************************************/
+
+std::string WordMarker::make_prefix () const {
+  return std::string(this->order, this->marker);
 }
 

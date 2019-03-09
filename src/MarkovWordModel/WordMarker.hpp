@@ -38,13 +38,17 @@ public:
 
   // specialized methods
   bool is_marker (char ch) const;
-  std::string apply_markers (std::string word) const;
+  std::string get_prefix () const;
+  std::string apply_markers (const std::string& word) const;
 
 private:
 
   // fields
   std::size_t order;
   char marker;
+
+  // helper methods
+  std::string make_prefix () const;
 
 };
 

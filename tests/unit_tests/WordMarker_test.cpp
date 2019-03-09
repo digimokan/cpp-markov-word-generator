@@ -23,6 +23,10 @@ TEST_CASE("first order WordMarker") {
     CHECK_FALSE(wm.is_marker('a'));
   }
 
+  SUBCASE("get_prefix()") {
+    CHECK_EQ(wm.get_prefix(), "_");
+  }
+
   SUBCASE("single char word") {
     std::string scword{ "a" };
     CHECK_EQ(wm.apply_markers(scword), "_a_");
@@ -44,6 +48,10 @@ TEST_CASE("third order WordMarker") {
   SUBCASE("is_marker(char)") {
     CHECK_UNARY(wm.is_marker('_'));
     CHECK_FALSE(wm.is_marker('a'));
+  }
+
+  SUBCASE("get_prefix()") {
+    CHECK_EQ(wm.get_prefix(), "___");
   }
 
   SUBCASE("single char word") {
