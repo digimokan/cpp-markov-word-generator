@@ -28,8 +28,9 @@ purpose:  an nth-order Markov Model for transitions between chars
 
 
 MarkovModel::MarkovModel (std::size_t order)
-  : order{order}
-{ }
+  : order{order} {
+  assert(this->order > 0);
+}
 
 /*******************************************************************************
 * SPECIALIZED METHODS

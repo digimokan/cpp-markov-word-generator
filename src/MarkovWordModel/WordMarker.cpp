@@ -9,6 +9,7 @@ purpose:  prefix/append word with markers for Markov Transitions
 * SYSTEM INCLUDES
 *******************************************************************************/
 
+#include <cassert>
 #include <cstddef>
 #include <string>
 
@@ -24,8 +25,9 @@ purpose:  prefix/append word with markers for Markov Transitions
 
 WordMarker::WordMarker (std::size_t order)
   : order{order},
-    marker{'_'}
-{ }
+    marker{'_'} {
+  assert(this->order > 0);
+}
 
 /*******************************************************************************
 * SPECIALIZED METHODS
