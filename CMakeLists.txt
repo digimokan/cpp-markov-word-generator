@@ -145,12 +145,10 @@ endif()
 add_library(user_lib ${project_sources})
 
 ################################################################################
-# LINK LIBS --> EXECUTABLES
+# EXTERNAL LIBS
 ################################################################################
 
-if(NOT "${project_source_main_exec}" STREQUAL "-")
-  target_link_libraries("${project_main_exec_to_build}" PRIVATE user_lib)
-endif()
+find_package(Boost 1.66.0 REQUIRED program_options)
 
 ################################################################################
 # COMPILATION DATABASE
@@ -183,15 +181,37 @@ add_definitions("${project_include_standards}")
 include_directories("${CMAKE_SOURCE_DIR}")
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 include_dir_and_recurse_subdirs(${project_source_dirs})
+include_directories(${Boost_INCLUDE_DIRS})
 
 # load cmake built-in modules to check availability
 include(CheckIncludeFiles)
 include(CheckFunctionExists)
 
 # check include availability
+
+# getopt_long
 check_include_files("getopt.h" HAVE_GETOPT_H)
 if(NOT HAVE_GETOPT_H)
   message( FATAL_ERROR "getopt.h header not found" )
+endif()
+
+# std::filesystem
+check_include_files("filesystem" HAVE_FILESYSTEM)
+if(NOT HAVE_FILESYSTEM)
+  message(FATAL_ERROR "C++17 <filesystem> header not found")
+endif()
+if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+  set(CXX_FILESYSTEM_LIBS "stdc++fs")
+elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+  set(CXX_FILESYSTEM_LIBS "c++fs")
+else()
+  message(FATAL_ERROR "std::filesystem: support unknown for non GNU/Clang system")
+endif()
+
+# boost libs
+check_include_files("boost/uuid/uuid.hpp;boost/uuid/uuid_generators.hpp;boost/uuid/uuid_io.hpp" HAVE_BOOST_UUID_HPP)
+if(NOT HAVE_BOOST_UUID_HPP)
+  message(FATAL_ERROR "one or more boost uuid headers not found")
 endif()
 
 # check function availability
@@ -200,6 +220,14 @@ if(NOT HAVE_GETOPT_LONG)
   message( FATAL_ERROR "getopt_long function not available" )
 endif()
 add_definitions("-DPOSIXLY_CORRECT")
+
+################################################################################
+# LINK LIBS --> EXECUTABLES
+################################################################################
+
+if(NOT "${project_source_main_exec}" STREQUAL "-")
+  target_link_libraries("${project_main_exec_to_build}" PRIVATE user_lib PRIVATE ${Boost_LIBRARIES} PRIVATE ${CXX_FILESYSTEM_LIBS})
+endif()
 
 ################################################################################
 # TESTING (OPTIONAL ADD-ON TO BUILD)
@@ -223,7 +251,7 @@ if(BUILD_TESTING)
   # cmake ctests to run / linked libs
   add_test(NAME "${testing_exec_to_build}" COMMAND "${testing_exec_to_build}")
   # link libs --> executables
-  target_link_libraries("${testing_exec_to_build}" PRIVATE user_lib)
+  target_link_libraries("${testing_exec_to_build}" PRIVATE user_lib PRIVATE ${Boost_LIBRARIES} PRIVATE ${CXX_FILESYSTEM_LIBS})
 
   # source config
 
