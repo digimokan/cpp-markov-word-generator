@@ -32,6 +32,7 @@ Train the model with data sets of words.
 
 * A Linux/UNIX system
 * C++ 17
+* Boost (version 1.66.0 or higher)
 * CMake
 * Git
 
