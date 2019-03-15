@@ -89,19 +89,19 @@ OPTIONS:
 * Train with "names.txt", order 3 model, min-word-length 5, generate 7 words:
 
    ```shell
-   $ ./markov-word-gen "names.txt" -o 3 -n 5 7
+   $ ./markov-word-gen -o 3 -n 5 "names.txt" 7
    ```
 
 * Train with "names.txt", min-word-length 5, max-word-length 6, generate 2 words:
 
    ```shell
-   $ ./markov-word-gen "names.txt" -n 5 -x 6 2
+   $ ./markov-word-gen -n 5 -x 6 "names.txt" 2
    ```
 
 * Train with "names.txt", order 4 model, min-word-length 6, generate 3 words:
 
    ```shell
-   $ ./markov-word-gen "names.txt" --order 4 --min-word-length 6 3
+   $ ./markov-word-gen --order 4 --min-word-length 6 "names.txt" 3
    ```
 
 ## Design
