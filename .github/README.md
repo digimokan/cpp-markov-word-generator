@@ -80,16 +80,28 @@ OPTIONS:
 
 ## Examples
 
-* Run with some option:
+* Train with "names.txt", generate 10 words:
 
    ```shell
-   $ ./markov-word-gen -d
+   $ ./markov-word-gen "names.txt" 10
    ```
 
-* Run with some other option:
+* Train with "names.txt", order 3 model, min-word-length 5, generate 7 words:
 
    ```shell
-   $ ./markov-word-gen -rt
+   $ ./markov-word-gen "names.txt" -o 3 -n 5 7
+   ```
+
+* Train with "names.txt", min-word-length 5, max-word-length 6, generate 2 words:
+
+   ```shell
+   $ ./markov-word-gen "names.txt" -n 5 -x 6 2
+   ```
+
+* Train with "names.txt", order 4 model, min-word-length 6, generate 3 words:
+
+   ```shell
+   $ ./markov-word-gen "names.txt" --order 4 --min-word-length 6 3
    ```
 
 ## Design
