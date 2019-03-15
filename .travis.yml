@@ -27,6 +27,7 @@ matrix:
           sources:
           - ubuntu-toolchain-r-test
           packages:
+          - cmake
           - libboost-all-dev
           - gcc-8
           - g++-8
@@ -36,9 +37,17 @@ matrix:
       dist: xenial
       compiler: clang
       addons:
+        sources:
+          - llvm-toolchain-xenial-7
         apt:
           packages:
+          - cmake
           - libboost-all-dev
+          - clang-7
+          - clang-tools-7
+      env:
+        - MATRIX_EVAL="CC=clang-7 && CXX=clang++-7"
+
 
 # build / test cmds
 script:
