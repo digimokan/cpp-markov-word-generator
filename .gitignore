@@ -1,4 +1,5 @@
 build
 markov-word-gen
 unit-tester
+compile_commands.json
 
