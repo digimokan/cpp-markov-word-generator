@@ -114,11 +114,11 @@ OPTIONS:
 ├─┬ cpp-markov-word-generator/
 │ │
 │ ├─┬ src/
-│ │ ├── FileReadWrite/      # read/write text file with single (training) words
+│ │ ├── FileReadWrite/      # read/write text file with training words
 │ │ ├── MarkovModel/        # nth-order markov model of letter transitions
 │ │ ├── MarkovTrainer/      # create/train a MarkovWordModel
 │ │ ├── MarkovTransition/   # letter transitions
-│ │ ├── MarkovWordModel/    # add word prefixes/endings to MarkovModel
+│ │ ├── MarkovWordModel/    # MarkovModel + word prefixes/endings
 │ │ ├── ProgramOpts/        # handle command-line program options
 │ │ └── WordGenerator/      # create model, generate new words
 │ │
