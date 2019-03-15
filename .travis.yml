@@ -27,6 +27,7 @@ matrix:
           sources:
           - ubuntu-toolchain-r-test
           packages:
+          - libboost-all-dev
           - gcc-7
           - g++-7
       before_script:
@@ -35,6 +36,10 @@ matrix:
     - os: linux
       dist: xenial
       compiler: clang
+      addons:
+        apt:
+          packages:
+          - libboost-all-dev
 
 # build / test cmds
 script:
