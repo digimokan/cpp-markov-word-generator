@@ -106,9 +106,7 @@ OPTIONS:
 
 ## Design
 
-A paragraph or two about architecture.
-
-<img src="readme_assets/design_diagram.svg" width="100%" height="400" alt="Design Diagram">
+<img src="readme_assets/architecture_uml_diagram.svg" width="100%" height="400" alt="Design Diagram">
 
 ## Source Code Layout
 
