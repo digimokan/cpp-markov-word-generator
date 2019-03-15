@@ -117,6 +117,11 @@ std::shared_ptr<WordBatchGenerator> ProgramOpts::make_word_gen () {
 }
 
 void ProgramOpts::opt_help () {
+  const std::string prog_name{ "./markov-word-gen" };
+  std::cout << "USAGE:\n";
+  std::cout << "  " << prog_name << "  -h\n";
+  std::cout << "  " << prog_name << "  [-o <n>]  [-n <n>]  [-x <n>]\n";
+  std::cout << "                     <words-text-file>  <num-words-to-gen>\n";
   std::cout << this->opts;
   std::exit(0);
 }
