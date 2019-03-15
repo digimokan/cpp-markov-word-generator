@@ -148,7 +148,7 @@ add_library(user_lib ${project_sources})
 # EXTERNAL LIBS
 ################################################################################
 
-find_package(Boost 1.66.0 REQUIRED program_options)
+find_package(Boost 1.58.0 REQUIRED program_options)
 
 ################################################################################
 # COMPILATION DATABASE
