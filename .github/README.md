@@ -59,13 +59,23 @@ Train the model with data sets of words.
 4. Run the program:
 
    ```shell
-   $ ./markov-word-gen
+   $ ./markov-word-gen "names.txt" 10
    ```
 
 ## Full Usage / Options
 
 ```
-<cut and paste help menu here>
+USAGE:
+  ./markov-word-gen  -h
+  ./markov-word-gen  [-o <n>]  [-n <n>]  [-x <n>]
+                     <words-text-file>  <num-words-to-gen>
+OPTIONS:
+  -h [ --help ]                      print this help message
+  -o [ --order ] arg (=2)            markov model order (min 1, default 2)
+  -n [ --min-word-length ] arg (=3)  min word length to generate (default 3)
+  -x [ --max-word-length ] arg (=10) max word length to generate (default 10
+  -w [ --words-text-file ] arg       text file with words to train model
+  -g [ --num-words-to-gen ] arg      number of random words to generate
 ```
 
 ## Examples
