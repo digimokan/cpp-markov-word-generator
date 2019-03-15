@@ -28,11 +28,10 @@ matrix:
           - ubuntu-toolchain-r-test
           packages:
           - libboost-all-dev
-          - gcc-7
-          - g++-7
-      before_script:
-        - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 60 --slave /usr/bin/g++ g++ /usr/bin/g++-7
-        - sudo update-alternatives --config gcc
+          - gcc-8
+          - g++-8
+      env:
+        - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
     - os: linux
       dist: xenial
       compiler: clang
