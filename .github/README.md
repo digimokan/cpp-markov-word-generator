@@ -4,7 +4,6 @@ Linux/UNIX command-line Markov Model word generator, written in C++.
 
 [![Release](https://img.shields.io/github/release/digimokan/cpp-markov-word-generator.svg?label=release)](https://github.com/digimokan/cpp-markov-word-generator/releases/latest "Latest Release Notes")
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?label=license)](LICENSE.txt "Project License")
-[![Build Status](https://img.shields.io/travis/com/digimokan/cpp-markov-word-generator/master.svg?label=linux+build)](https://travis-ci.com/digimokan/cpp-markov-word-generator "Build And Test Results From Master Branch")
 
 ## Table Of Contents
 
